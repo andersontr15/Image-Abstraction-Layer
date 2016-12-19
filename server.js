@@ -12,8 +12,6 @@ app.locals.searches = [];
 
 app.use(morgan('combined'));
 
-app.set('view engine', 'ejs');
-
 app.get('/search/:query', (request, response) => {
 	var offset = request.query.offset || 10;
 	var q = request.params.query || null;
